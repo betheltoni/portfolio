@@ -5,6 +5,8 @@ import Projects from "./component/Projects"
 import { skills } from "./utils/utils"
 import { AiOutlineCopyrightCircle } from "react-icons/ai"
 import { useState } from "react"
+import Typical from "react-typical"
+import resume from "./utils/resume.pdf"
 
 function App() {
     const [darkMode, setDarkMode] = useState(false)
@@ -12,15 +14,29 @@ function App() {
         <div className={darkMode ? "dark" : ""}>
             <Layout darkMode={darkMode} setDarkMode={setDarkMode}>
                 <main className="p-5 lg:p-10 md:p-10 bg-white dark:bg-nusery">
-                    <section className="min-h-screen font-rubik ">
+                    <section className="min-h-screen font-rubik " id="top">
                         <div className="py-10 mt-20 max-w-xl text-primary dark:text-secondary lg:mx-[15%] mx-[5%]">
                             <p className="text-lg py-7  ">Hi, my name is</p>
                             <p className="md:text-6xl lg:text-7xl text-4xl py-5 font-bold text-final">
                                 Bethel Enunwa
                             </p>
-                            <p className="lg:text-4xl md:text-3xl text-3xl pt-5 font-bold">
-                                I'm a Frontend Engineer.
-                            </p>
+                            <div className="flex">
+                                <p className="lg:text-4xl md:text-3xl text-2xl pt-5 font-bold">
+                                    I'm a{" "}
+                                </p>
+                                <span className="lg:text-4xl md:text-3xl text-2xl pt-5 font-bold pl-1">
+                                    <Typical
+                                        steps={[
+                                            "Frontend Engineer.",
+                                            2000,
+                                            "Support Engineer.",
+                                            2000,
+                                        ]}
+                                        wrapper="p"
+                                        loop={Infinity}
+                                    />
+                                </span>
+                            </div>
                             <p className="py-5 text-base">
                                 Building{" "}
                                 <span className="text-final font-semibold">
@@ -30,9 +46,9 @@ function App() {
                                 my main focus.
                             </p>
                             <div className="mt-5">
-                                <button className="rounded py-1 px-3 font-medium shadow-md dark:border dark:border-final hover:bg-final dark:hover:border-tertiary hover:text-secondary transition ease-in-out duration-500">
+                                <a href={resume} target="_blank" rel="noreferrer" className="rounded py-1 px-3 font-medium shadow-md dark:border dark:border-final hover:bg-final dark:hover:border-tertiary hover:text-secondary transition ease-in-out duration-500">
                                     Resume
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </section>
@@ -63,9 +79,21 @@ function App() {
                                         that adhere to web standards for several
                                         clients across the world
                                     </span>
-                                    . I appreciate being engaged by projects
-                                    that require me to think outside the box and
-                                    pick up new skills. I have excellent
+                                    , and a support engineer for{" "}
+                                    <a href="https://heritagemensclinic.ng/">
+                                        <span className="text-final font-semibold cursor-pointer">
+                                            Heritage men's clinic
+                                        </span>
+                                    </a>{" "}
+                                    and{" "}
+                                    <a href="https://healthfacts.ng/">
+                                        <span className="text-final font-semibold cursor-pointer">
+                                            healthfacts
+                                        </span>
+                                    </a>{" "}
+                                    I appreciate being engaged by projects that
+                                    require me to think outside the box and pick
+                                    up new skills. I have excellent
                                     collaborative and organizational skills, I
                                     am hardworking and I pay attention to
                                     details.
@@ -113,9 +141,11 @@ function App() {
                             Got a question or proposal, or just want to say
                             hello? Go ahead.
                         </p>
-                        <a href="mailto:enunwabethel@gmail.com"><button className="rounded py-4 px-8 text-xl font-medium shadow-md dark:border dark:border-final hover:bg-final dark:hover:border-tertiary transition ease-in-out duration-500">
-                            Say Hello
-                        </button></a>
+                        <a href="mailto:enunwabethel@gmail.com">
+                            <button className="rounded py-4 px-8 text-xl font-medium shadow-md dark:border dark:border-final hover:bg-final dark:hover:border-tertiary transition ease-in-out duration-500">
+                                Say Hello
+                            </button>
+                        </a>
                     </section>
                     <footer>
                         <hr />

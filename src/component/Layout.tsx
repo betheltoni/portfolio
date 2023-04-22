@@ -1,11 +1,17 @@
 import { Divider, Drawer } from "@mantine/core"
 import { useDisclosure } from "@mantine/hooks"
 import { Dispatch, ReactNode, SetStateAction } from "react"
-import { AiFillGithub, AiOutlineMenu, AiOutlineTwitter } from "react-icons/ai"
+import {
+    AiFillGithub,
+    AiFillMail,
+    AiOutlineMenu,
+    AiOutlineTwitter,
+} from "react-icons/ai"
 import { TfiLinkedin } from "react-icons/tfi"
 import { MdDarkMode } from "react-icons/md"
 import { FiSun } from "react-icons/fi"
 import { IoLogoBitbucket } from "react-icons/io"
+import logo from "../assets/logo.png"
 
 const Layout = ({
     children,
@@ -20,12 +26,14 @@ const Layout = ({
     return (
         <div className="h-screen relative ">
             <div className="w-full fixed right-0 z-20 bg-white-100 pb-3">
-                <nav className=" flex justify-between bg-white dark:bg-nusery py-5 px-10 ">
-                    <div>
-                        <h3 className="font-sofia font-bold dark:text-secondary">
-                            TONI__B
-                        </h3>
-                    </div>
+                <nav className=" flex justify-between bg-white dark:bg-nusery pb-2 pt-4 px-10  ">
+                    <a href="#top">
+                        <img
+                            src={logo}
+                            alt="logo"
+                            className="lg:ml-6 dark:border dark:border-tertiary cursor-pointer"
+                        />
+                    </a>
                     <div className="lg:flex md:flex gap-10 hidden font-rubik">
                         <ul className="grid grid-cols-4 gap-10 dark:text-secondary ">
                             <a
@@ -63,7 +71,7 @@ const Layout = ({
                             )}
                         </ul>
                     </div>
-                    <div className="lg:hidden md:hidden flex gap-2">
+                    <div className="lg:hidden md:hidden flex gap-4 ">
                         <Drawer
                             opened={opened}
                             onClose={close}
@@ -75,29 +83,73 @@ const Layout = ({
                                 duration: 150,
                                 timingFunction: "linear",
                             }}
+                            styles={() => ({
+                                content: {
+                                    backgroundColor: "#0B0C10",
+                                    color: "#C5C6C7",
+                                },
+                                header: {
+                                    backgroundColor: "#0B0C10",
+                                },
+                            })}
                         >
-                            <ul className="text-center leading-10 font-rubik dark:text-secondary">
-                                <a
-                                    className="transition ease-in-out duration-500 hover:text-final  py-5"
-                                    href="#about"
-                                >
-                                    <li>About</li>
-                                </a>
-                                <a
-                                    className="transition ease-in-out duration-500 hover:text-final  py-5"
-                                    href="#projects"
-                                >
-                                    <li>Projects</li>
-                                </a>
-                                <a
-                                    className="transition ease-in-out duration-500 hover:text-final  py-5"
-                                    href="#contact"
-                                >
-                                    <li>Contact</li>
-                                </a>
-                            </ul>
+                            <div>
+                                <ul className="text-center leading-10 font-rubik dark:text-secondary">
+                                    <a
+                                        className="transition ease-in-out duration-500 hover:text-final  py-5"
+                                        href="#about"
+                                    >
+                                        <li>About</li>
+                                    </a>
+                                    <a
+                                        className="transition ease-in-out duration-500 hover:text-final  py-5"
+                                        href="#projects"
+                                    >
+                                        <li>Projects</li>
+                                    </a>
+                                    <a
+                                        className="transition ease-in-out duration-500 hover:text-final  py-5"
+                                        href="#contact"
+                                    >
+                                        <li>Contact</li>
+                                    </a>
+                                </ul>
+                                <hr className="my-10" />
+                                <div className="flex justify-center gap-10">
+                                    <TfiLinkedin
+                                        className="my-6 dark:hover:text-tertiary hover:text-final cursor-pointer "
+                                        onClick={() =>
+                                            window.open(
+                                                "https://www.linkedin.com/in/bethel-enunwa-ba8502187/"
+                                            )
+                                        }
+                                    />
+                                    <AiFillGithub
+                                        className="my-6 dark:hover:text-tertiary hover:text-final cursor-pointer "
+                                        onClick={() =>
+                                            window.open(
+                                                "https://github.com/betheltoni"
+                                            )
+                                        }
+                                    />
+                                    <IoLogoBitbucket
+                                        className="my-6 dark:hover:text-tertiary hover:text-final cursor-pointer "
+                                        onClick={() =>
+                                            window.open(
+                                                "https://bitbucket.org/iqubelabs/workspace/repositories"
+                                            )
+                                        }
+                                    />
+                                    <a href="mailto:enunwabethel@gmail.com">
+                                        <AiFillMail className="my-6 dark:hover:text-tertiary hover:text-final cursor-pointer " />
+                                    </a>
+                                </div>
+                            </div>
                         </Drawer>
-                        <AiOutlineMenu onClick={open} />
+                        <AiOutlineMenu
+                            onClick={open}
+                            className="text-final cursor-pointer"
+                        />
                         <div>
                             {darkMode === false ? (
                                 <li

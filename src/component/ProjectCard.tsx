@@ -20,10 +20,10 @@ const ProjectCard = ({
         <div>
             {index % 2 !== 0 ? (
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-6 my-20 relative">
-                    <div className="opacity-70 transition delay-250  hover:opacity-100">
+                    <div className="opacity-70 transition delay-250  hover:opacity-100 my-2">
                         <img src={logo} alt="" className="rounded-xl" />
                     </div>
-                    <div className="p-5 lg:p-10 md:p-10 rounded-lg shadow-md dark:text-secondary">
+                    <div className="p-5 lg:p-10 md:p-10 rounded-lg dark:border-final dark:border shadow-md dark:text-secondary">
                         
                         <p className="text-lg font-medium mb-4 text-center text-nusery dark:text-secondary">
                             {name}
@@ -52,7 +52,7 @@ const ProjectCard = ({
                 </div>
             ) : (
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-6 my-20 relative dark:text-secondary">
-                    <div className="p-5 lg:p-10 md:p-10 rounded-lg shadow-md">
+                    <div className="p-5 lg:p-10 md:p-10 rounded-lg shadow-md dark:border-final dark:border">
                         
                         <p className="text-lg font-medium mb-4 text-center text-nusery dark:text-secondary">
                             {name}
@@ -77,7 +77,7 @@ const ProjectCard = ({
                             onClick={() => window.open(livePreview)}
                         />
                     </div>
-                    <div className="opacity-70 transition delay-250 hover:opacity-100">
+                    <div className="opacity-70 transition delay-250 hover:opacity-100 my-2">
                         <img src={logo} alt="" className="rounded-xl" />
                     </div>
                 </div>
