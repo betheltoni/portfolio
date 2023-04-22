@@ -16,7 +16,7 @@ function App() {
                         <div className="py-10 mt-20 max-w-xl text-primary dark:text-secondary lg:mx-[15%] mx-[5%]">
                             <p className="text-lg py-7  ">Hi, my name is</p>
                             <p className="md:text-6xl lg:text-7xl text-4xl py-5 font-bold text-final">
-                                Bethel Tonito Enunwa
+                                Bethel Enunwa
                             </p>
                             <p className="lg:text-4xl md:text-3xl text-3xl pt-5 font-bold">
                                 I'm a Frontend Engineer.
