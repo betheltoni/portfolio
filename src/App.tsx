@@ -1,5 +1,5 @@
 import { BiLinkExternal } from "react-icons/bi"
-import alt from "./assets/alt.jpg"
+import avi from "./assets/avi.jpg"
 import Layout from "./component/Layout"
 import Projects from "./component/Projects"
 import { skills } from "./utils/utils"
@@ -112,8 +112,8 @@ function App() {
                                     </ul>
                                 </div>
                             </div>
-                            <div className="basis-[40%] my-10 lg:my-32 dark:border dark:border-final dark:rounded  dark:hover:border-tertiary">
-                                <img src={alt} alt="" className="" />
+                            <div className="basis-[40%] my-10 lg:my-32  dark:rounded ">
+                                <img src={avi} alt="" className="" />
                             </div>
                         </div>
                     </section>
