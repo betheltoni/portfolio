@@ -64,15 +64,11 @@ function App() {
                         </div>
                         <div className="lg:flex gap-20">
                             <div className="basis-[60%] text-justify dark:text-secondary">
-                                <p className="leading-8 py-2">
-                                    My career in tech started off during the
-                                    covid 19 pandemic. I started by taking
-                                    several courses on web development and
-                                    gradually developed interest for code, and
-                                    i've not looked back since.
+                                <p className="leading-8 py-2 text-md font-bold">
+                                    I'm just a text away and I'm available to work and collaborate on exciting projects.
                                 </p>
                                 <p className="leading-8 py-2">
-                                    currently, I work with iQubeLabs as a
+                                    I worked with iQubeLabs as a
                                     Frontend Engineer developing{" "}
                                     <span className="text-final font-semibold">
                                         innovative and market-ready solutions
